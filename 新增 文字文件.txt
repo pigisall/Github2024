@@ -25,11 +25,71 @@ Sourcetree  7 Sourcetree軟體教學 (youtube.com)
 如有新增 在Unstaged files 按+  //增加資料進索引
 點選左上 commit  //進本地數據庫
 
-上傳Git 8 新增遠端數據庫 repo (youtube.com)
+上傳Github  8 新增遠端數據庫 repo (youtube.com)
 進入Github 點選+new repository  //=在遠端創建init
 選擇要 創建新的 或 是選擇已有的Git 
-已有的: git remote add origin https://github.com/XXXXX/XXXXX.git
-
-  
+已有的: 
+git remote add origin https://github.com/XXXX/XXXX.git
 git branch -M main 
 git push -u origin main
+
+熱門Git  14 Bitbucket 服務介紹 (youtube.com)
+GitHub
+Bitbucket
+Gitlab
+可多個遠端數據庫:
+git remote add origin https://github.com/pigisall/Github2024.git 
+
+  //這是第一個
+git remote add git2 https://github.com/pigisall/Github2024-1.git
+
+   //改origin > git2 
+
+Git HEAD 指標 checkout 前往  15 HEAD 指標、checkout 前往 (youtube.com)
+直接在Sourcetree 點選可以看到當時的檔案狀態
+指令方法為: 1. git log 看commit 編碼
+git checkout XXXXXXX  //還原到當時狀態
+git checkout master  //回到最新狀態 master or main
+
+
+Git 20 開設、合併分支 (youtube.com)
+git branch 分支名稱  //開新分支
+git branch  //查看分支
+git checkout 分之名稱，//切換分支，HEAD 會依指定位置 commit
+git branch -d 分支名稱  //刪除分支
+git merge develop  //在 main 合併分支到 develop
+git merge develop --no-ff  // 合併分支 取消快轉
+git log -oneline -graph  //觀看線圖
+
+git 練習分支網頁 Learn Git Branching
+
+Git 26 Git Reset 版本還原 (youtube.com)
+git reset HEAD --hard  //還原合併前狀態
+git reset HEAD^^^  //還原上上上個版本  一個^ 為一個版本
+git checkout 71b0a68  //HEAD 移動到該 commit 
+git reflog  //觀看詳細歷史紀錄
+
+Git 30 Git 發 GitHub PR 請求流程 pull request (youtube.com)
+發PR(pull requests)流程:
+Ray 是一個開發者，並有一個 master 開發分支
+我很喜歡這專案，但發現有個小問題
+於是fork他的專案，在 master 上新增了一個 commit 並下了 PR
+Ray 覺得不錯，於是 merge 了 PR
+我如何操作:
+git clone git@github.com:pigisall/Github2024.git    //數據庫先複製下來
+git push origin main  //修改好了推到自己的GitHub
+進github > pull requests > New pull request  //發送請求合併
+
+Git 31 Git Merge 衝突解決
+https://youtu.be/-6xhsLQQJBc?list=PLYrA-SsMvTPOZeB6DHvB0ewl3miMf-2tj
+如遇到衝突
+// <<<<<<< HEAD
+    <h1>這是標題 main main</h1>
+=======
+    <h1>這是標題 dev dev</h1>
+// >>>>>>> dev
+解決後再 git add .
+git commit -m "XXXX"
+
+Git 35 GitHub flow 線上三人實際演練 (youtube.com)
+HEROHU Cloud Application Platform | Heroku
