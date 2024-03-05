@@ -7,8 +7,8 @@ Git 3 終端機指令 cd 前往 (youtube.com)
 CD 前往資料夾 
 git init  // 安裝GIT
 git --version  // 確認安裝
-git config --global user.name "XXXX"  //輸入姓名
-git config --global user.email "XXXX@gmail.com"  //輸入個人mail
+git config --global user.name "pigisall"  //輸入姓名 第一次請輸入
+git config --global user.email "pigisall@gmail.com"  //輸入個人mail 第一次請輸入
 git config --list
 完成設定
 
@@ -28,22 +28,23 @@ Sourcetree  7 Sourcetree軟體教學 (youtube.com)
 上傳Github  8 新增遠端數據庫 repo (youtube.com)
 進入Github 點選+new repository  //=在遠端創建init
 選擇要 創建新的 或 是選擇已有的Git 
-已有的: 
-git remote add origin https://github.com/XXXX/XXXX.git
+已有的: git remote add origin https://github.com/pigisall/Github2024.git  
 git branch -M main 
 git push -u origin main
+
+Git 指令縮寫  10 Git 指令縮寫 (youtube.com)
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.st status
+git config --global alias.ci commit
 
 熱門Git  14 Bitbucket 服務介紹 (youtube.com)
 GitHub
 Bitbucket
 Gitlab
 可多個遠端數據庫:
-git remote add origin https://github.com/pigisall/Github2024.git 
-
-  //這是第一個
-git remote add git2 https://github.com/pigisall/Github2024-1.git
-
-   //改origin > git2 
+git remote add origin https://github.com/pigisall/Github2024.git   //這是第一個
+git remote add git2 https://github.com/pigisall/Github2024-1.git   //改origin > git2 
 
 Git HEAD 指標 checkout 前往  15 HEAD 指標、checkout 前往 (youtube.com)
 直接在Sourcetree 點選可以看到當時的檔案狀態
@@ -83,13 +84,24 @@ git push origin main  //修改好了推到自己的GitHub
 Git 31 Git Merge 衝突解決
 https://youtu.be/-6xhsLQQJBc?list=PLYrA-SsMvTPOZeB6DHvB0ewl3miMf-2tj
 如遇到衝突
-// <<<<<<< HEAD
+ <<<<<<< HEAD
     <h1>這是標題 main main</h1>
 =======
     <h1>這是標題 dev dev</h1>
-// >>>>>>> dev
+ >>>>>>> dev
 解決後再 git add .
 git commit -m "XXXX"
 
 Git 35 GitHub flow 線上三人實際演練 (youtube.com)
 HEROHU Cloud Application Platform | Heroku
+
+
+Git SSH Key 的建立與設定 https://www.youtube.com/watch?v=CeC_qyQHiCE
+ssh-keygen  //建立公鑰與私鑰，建議建立時要有密碼
+前往預設目錄
+ ls -al  //看目錄內檔案
+cat 檔案名.pub  //看公鑰檔案內容 複製到 gitlab> User Settings / SSH Keys  & github> /settings/Deploy keys
+git push  --set-upstream origin main
+
+
+
