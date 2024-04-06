@@ -3,7 +3,7 @@ Git (git-scm.com)
 GitHub
 Sourcetree | Free Git GUI for Mac and Windows (sourcetreeapp.com)
 
-Git 3 終端機指令 cd 前往 (youtube.com)
+Git 3 終端機指令 cd 前往 (https://www.youtube.com/watch?v=95IibQuSKDA)
 CD 前往資料夾 
 git init  // 安裝GIT
 git --version  // 確認安裝
@@ -51,7 +51,6 @@ Git HEAD 指標 checkout 前往  15 HEAD 指標、checkout 前往 (youtube.com)
 指令方法為: 1. git log 看commit 編碼
 git checkout XXXXXXX  //還原到當時狀態
 git checkout master  //回到最新狀態 master or main
-
 
 Git 20 開設、合併分支 (youtube.com)
 git branch 分支名稱  //開新分支
